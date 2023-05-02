@@ -1,0 +1,18 @@
+#server:
+#  port: 8080
+
+spring:
+  mvc.static-path-pattern: /**
+  web.resources.static-locations: classpath:/static/
+
+  freemarker:
+    suffix: .ftl
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: fibi2017
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
