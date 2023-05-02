@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+group 'org.geekhub.polina'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.31'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-freemarker'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.postgresql:postgresql:42.5.4'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.0.4'
+    implementation 'org.springframework:spring-messaging:5.3.8'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+   implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '3.0.5'
+    implementation group: 'org.springframework.security', name: 'spring-security-core', version: '6.0.2'
+    implementation 'org.apache.commons:commons-csv:1.8'
+    implementation 'org.apache.poi:poi-ooxml:5.1.0'
+}
+test {
+    useJUnitPlatform()
+}
